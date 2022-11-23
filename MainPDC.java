@@ -7,8 +7,8 @@ public class MainPDC {
 	
 		Product apple = new Product("Apple", 5, 12);		
 		Product morot = new Product("Morot", 2, 7);		
-		Discounted gurka = new Discounted ("Gurka", 7, 7, 0.98);
-				
+		Discounted gurka = new Discounted ("Gurka", 10, 7, 0.98);
+				gurka.getnewPrice();
 				
 		
 		Customer c = new Customer();
@@ -18,7 +18,7 @@ public class MainPDC {
 
 				System.out.println("--------------------- Välkommen till E-Handel butik-----------------------------\n");
 				System.out.println("Du har 4 val: \n");
-				System.out.println("1." + " köp " + gurka.getname() +"\t"+ gurka.getantal() + " St\t\t " +  gurka.getprice() + " SEK" + " plus rabbat "  + "1%");
+				System.out.println("1." + " köp " + gurka.getname() +"\t"+ gurka.getantal() + " St\t\t " +  gurka.getprice() + " SEK");
 				System.out.println("2." +  " köp " + morot.getname() +"\t"+ morot.getantal()+ " St\t\t " + morot.getprice() + " SEK");
 				System.out.println("3." +  " köp " + apple.getname() +"\t"+ apple.getantal() + " St\t\t " + apple.getprice() +" SEK\n");
 				System.out.println("4. Lämna E-handel butiken! ");
@@ -37,7 +37,7 @@ public class MainPDC {
 						c.addProduct();	
 						c.addPriceProduct(gurka.getprice());
 						gurka.updateSystem();	
-						c.addDiscountPris(gurka.getnewPrice());
+//						c.addDiscountPris(gurka.getnewPrice());
 						
 						
 //						System.out.println("\tAntal varor: " +c.getnumberP() + " Total pris: " + c.gettotalP()+"\n");
@@ -62,7 +62,7 @@ public class MainPDC {
 						
 					case 4:
 						System.out.print("Välkomen tillbaka \n");
-						System.out.println("Totala köpt varor: " + c.getnumberP() + " Total pris: " + c.gettotalP() + " Total med rabbat: "+ c.getdiscountPriceNew()+"\n");
+						System.out.println("Totala köpt varor: " + c.getnumberP() + " Total pris: " + c.gettotalP() + " Kr " + "\n");
 						
 						System.exit(meny);
 						
