@@ -26,6 +26,9 @@ public class Product {
 	int getantal() {
 		return antal;
 	}
+	public void  setprice(int price2) {
+		price=price2;
+	}
 	
 	int getprice() {
 		return price;
