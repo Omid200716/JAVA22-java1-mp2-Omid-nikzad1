@@ -3,7 +3,7 @@ public class Customer {
    String nameP;
   private  int antalProdukter = 0;
   private int totalPrice = 0;
-   double discountPriceNew = 0;
+  private int discountPriceNew = 0;
 	
 	
 //	Customer(int antalProdukter, int totalPrice, String nameP) {
@@ -22,7 +22,7 @@ public class Customer {
 		totalPrice = totalPrice +price;
 	}
 	
-    void  addDiscountPris(double newPrice) {
+    void  addDiscountPris(int newPrice) {
 		discountPriceNew = discountPriceNew + newPrice;
 	}
 	
@@ -35,7 +35,7 @@ public class Customer {
 		return totalPrice;
 	}
 	
-	double getdiscountPriceNew() {
+	int getdiscountPriceNew() {
 		return discountPriceNew;
 	}
 	
